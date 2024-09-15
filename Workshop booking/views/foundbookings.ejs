@@ -1,0 +1,27 @@
+<body>
+    
+    <h1>All the bookings made with the email <%= bookedlist.Email %> can be seen below</h1>
+   
+
+    <% for(var i=0; i < bookedlist.length; i++) { %>
+    <div id="bookings">
+     <p>ID:<%= bookedlist[i].id %></p>
+     <% var userID = bookedlist[i].id %>
+     <p>First Name:<%= bookedlist[i].FName %></p>
+     <p>Last Name:<%= bookedlist[i].LName %></p>
+     <p>Email:<%= bookedlist[i].Email %></p>
+     <p>PhoneNumber:<%= bookedlist[i].Phoneno %></p>
+     <p>Date:<%= bookedlist[i].Date.toDateString() %></p>
+     <p>Time:<%= bookedlist[i].Time %></p>
+     <p>Card Name:<%= bookedlist[i].CardFName %></p>
+     <p>Card Number:<%= bookedlist[i].CardNo %></p>
+     <p>Expiry: <%= bookedlist[i].ExpMonthYear.toDateString().split(" ")[1]+" "+bookedlist[i].ExpMonthYear.toDateString().split(" ")[3] %></p>
+     <p>Cvv:<%= bookedlist[i].CVV %></p>
+     <button onclick="ModifyBooking(`<%= userID %>`)">Modify the Booking</button>
+     <button onclick="PopUpDelete(`<%= userID %>`)">Delete the Booking</button>
+    </div>
+    
+    <% } %>
+    
+    
+    </body>

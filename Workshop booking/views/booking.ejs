@@ -1,0 +1,41 @@
+<h1>Booking Page</h1>
+<nav id="bookingnav">
+
+<p>
+    <form method="post" action="/booking" id="newbooking" class="container">
+        <div id="bookingform">
+        <div id="personaldetails">
+        <p>Personal Details</p>
+        <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+        <label for="phoneno" placeholder ="e.g 0871234567">Phone Number:</label>
+            <input type="text"  pattern="[0-9]*" id="phoneno" name="phoneno" maxlength="10" required><br><br>
+        <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </div>
+        <div id="bookingdetails">
+        <p>Booking Details</p>
+        <label for="bookingDate">Date:</label>
+            <input type="date" name="bookingDate" id="bookingDate" min = "2023-10-20" onclick="CurrentDate()"><br><br>
+        <label for="times">Choose a time for your booking:</label>
+            <input type="time" name="times" id="times" min= 11:00:00.00 max= 16:00:00.00 step="3600"><br><br>
+        </div>
+        <div id="paymentdetails">      
+        <p>Payment Details</p>
+        <label for="name_card">Full name on card:</label>
+            <input type="text" id="name_card" name="name_card" required><br><br>
+        <label for="cardno">Card Number:</label>
+            <input type="tel" id="cardno" name="cardno" maxlength="16" required><br><br>
+        <label for="expmonth">Month and Year:</label>
+            <input type="month" name="ExpMonthYear" id="ExpMonthYear" min="2023-05" onclick="CurrentDate2()"><br><br>
+        <label for="cvv">CVV:</label>
+        <input type="tel" name="cvv" id="cvv" maxlength="3"><br><br>
+        </div>  
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</p>

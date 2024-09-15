@@ -1,0 +1,43 @@
+<h1>Updating the Booking of <%= updatebooking.FName %></h1>
+
+
+
+
+
+
+<form method="post"  action="/booking/update_complete/<%= updatebooking._id %>" id="updatebooking" class="container">
+    <div id="bookingform">
+    <div id="personaldetails">
+    <p>Personal Details</p>
+    <label for="fname">First name:</label>
+        <input type="text" id="fname" name="FName" value="<%= updatebooking.FName %>" required><br><br>
+    <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="LName" value="<%= updatebooking.LName %>" required><br><br>
+    <label for="phoneno" placeholder ="e.g 0871234567">Phone Number:</label>
+        <input type="tel" id="phoneno" name="Phoneno" maxlength="10" value="<%= updatebooking.Phoneno %>" required><br><br>
+    <label for="email">Email Address</label>
+        <input type="email" id="email" name="Email" value="<%= updatebooking.Email %>" required><br><br>
+    </div>
+    <div id="bookingdetails">
+    <p>Booking Details</p>
+    <label for="bookingDate">Date:</label>
+        <input type="date" name="Date" id="bookingDate" min = "2023-10-20" value="<%= updatebooking.Date.toISOString().split("T")[0]; %>"  ><br><br>
+    <label for="times">Choose a time for your booking:</label>
+    <input type="time" name="Time" id="times" min= 11:00:00.00 max= 16:00:00.00 step="3600" value="<%= updatebooking.Time %>">
+    </div>
+    <div id="paymentdetails">      
+    <p>Payment Details</p>
+    <label for="name_card">Full name on card:</label>
+        <input type="text" id="CardFName" name="name_card" value="<%= updatebooking.CardFName %>" required><br><br>
+    <label for="cardno">Card Number:</label>
+        <input type="tel" id="cardno" name="cardno" maxlength="16" value="<%= updatebooking.CardNo %>" required><br><br>
+    <label for="ExpMonthYear">Month and Year:</label>
+        <input type="month" name="ExpMonthYear" id="ExpMonthYear" min="2023-11" onclick="CurrentDate2()" value="<%= updatebooking.ExpMonthYear.toISOString().split("T")[0].split("-")[0]+"-"+updatebooking.ExpMonthYear.toISOString().split("T")[0].split("-")[1]; %>">
+        <br><br>
+    <label for="cvv">CVV:</label>
+    <input type="tel" name="CVV" id="cvv" maxlength="3" value="<%= updatebooking.CVV %>"><br><br>
+    </div>  
+    </div>
+
+    <input type="submit" value="Submit" >
+</form>

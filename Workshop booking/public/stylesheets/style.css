@@ -1,0 +1,81 @@
+*{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.header{
+  text-align: right;
+  background-color: #0d518a;
+  background-image: linear-gradient(to right,yellow , rgb(43, 43, 194));
+  padding: 50px 0px 50px 0px;
+  border-radius: 30px;
+}
+
+.mainnava{
+  color: #ffffff;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid black;
+  text-decoration: none;
+
+  border-radius: 15px;
+  text-size-adjust: 50px;
+}
+.mainnava:hover{
+  border-color: #ffde57;
+}
+
+/* .main{
+  background-image: url("../images/python\ \(Custom\).png");
+  background-repeat: repeat-x ;
+  
+} */
+
+body{
+  padding: 50px;
+  
+}
+
+
+
+
+
+h1 {
+  text-align: center;
+  font-style: oblique;
+}
+
+
+
+#bookingform{
+  display: flex;
+}
+
+#personaldetails{
+  flex: 33.33%;
+}
+#bookingdetails{
+  flex: 33.33%;
+}
+
+#paymentdetails{
+  flex: 33.33%;
+}
+
+
+#bookingnav{
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+
+#bookings{
+  border: 3px solid #00B7FF;
+  text-align: center;
+  margin: 10px;
+}

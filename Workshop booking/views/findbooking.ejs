@@ -1,0 +1,22 @@
+<h1>Find a Booking</h1>
+
+<form method="post"  action="/booking/findbooking" id="find_booking" class="container" onload="CurrentDate()">
+    <div id="bookingform">
+        <div id="personaldetails">
+            <p>Please enter your details:</p>
+            <label for="fname">First name:</label>
+                <input type="text" id="fname" name="FName" required><br><br>
+            <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="LName" required><br><br>
+            <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" required><br><br>
+        </div>
+        <div id="bookingdetails">
+            <p>Booking Details</p>
+            <label for="bookingDate">Date:</label>
+                <input type="date" name="Date" id="bookingDate"><br><br>
+            </div>
+    </div>
+
+    <input type="submit" value="Search" >
+</form>
